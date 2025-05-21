@@ -3,43 +3,47 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Adaptation Référentiel Ingétis - Big Data et Cybersécurité</title>
+  <title>Adaptation Référentiel Ingétis</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/reveal.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/theme/white.min.css" id="theme">
   
   <style>
+    body {
+      background: #fff;
+      font-family: Arial, sans-serif;
+    }
     .reveal {
-      font-size: 30px; /* Base font size increase */
+      font-size: 30px;
+    }
+    .reveal .slides {
+      text-align: left;
     }
     .reveal h1 {
-      font-size: 1.8em;
+      font-size: 2em;
       color: #003366;
-      margin-bottom: 20px;
+      text-align: center;
     }
     .reveal h2 {
-      font-size: 1.4em;
+      font-size: 1.5em;
       color: #004c99;
-      margin-bottom: 20px;
+      text-align: center;
     }
     .reveal h3 {
-      font-size: 1.1em;
+      font-size: 1.2em;
       color: #0066cc;
     }
     .reveal ul {
       display: block;
-      font-size: 0.8em;
+      font-size: 0.9em;
     }
     .reveal li {
       margin-bottom: 0.3em;
     }
-    .reveal .smaller {
-      font-size: 0.7em;
-    }
-    .reveal .highlight {
+    .highlight {
       color: #e63946;
       font-weight: bold;
     }
-    .reveal .success {
+    .success {
       color: #2a9d8f;
       font-weight: bold;
     }
@@ -57,119 +61,99 @@
       flex: 1;
       padding: 0 10px;
     }
-    .logo-container {
-      position: absolute;
-      bottom: 10px;
+    .logos {
+      position: fixed;
+      bottom: 20px;
+      left: 0;
       width: 100%;
       display: flex;
-      justify-content: space-between;
-      padding: 0 30px;
+      justify-content: space-around;
+      z-index: 10;
     }
-    .logo {
+    .logos img {
       height: 40px;
-      margin: 0 10px;
     }
     
-    /* Simple horizontal diagram */
-    .simple-diagram {
+    /* Diagramme horizontal simplifié */
+    .diagram-container {
+      width: 700px;
       margin: 30px auto;
-      max-width: 800px;
-      position: relative;
-      height: auto;
       display: flex;
-      flex-direction: column;
       align-items: center;
     }
-    
-    .diagram-row {
-      display: flex;
-      width: 100%;
-      justify-content: flex-start;
-      margin-bottom: 20px;
-      align-items: center;
-    }
-    
-    .tronc-commun-box {
+    .tronc-commun {
       background-color: #4472c4;
       color: white;
       padding: 15px;
       border-radius: 5px;
-      text-align: center;
-      width: 150px;
       font-weight: bold;
+      text-align: center;
+      width: 100px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-    
-    .connector-line {
-      width: 60px;
+    .connector {
+      width: 40px;
       height: 2px;
-      background-color: #333;
+      background-color: #000;
+      margin: 0 10px;
     }
-    
-    .vertical-line {
+    .fork {
+      display: flex;
+      flex-direction: column;
+    }
+    .fork-line {
       width: 2px;
-      height: 110px;
-      background-color: #333;
+      height: 140px;
+      background-color: #000;
+      margin: 0 auto;
       position: relative;
     }
-    
-    .fork-lines {
-      display: flex;
-      flex-direction: column;
-      height: 100px;
-      position: relative;
-    }
-    
-    .top-line, .bottom-line {
-      width: 60px;
-      height: 2px;
-      background-color: #333;
+    .fork-branch {
       position: absolute;
+      width: 40px;
+      height: 2px;
+      background-color: #000;
+      right: 0;
     }
-    
-    .top-line {
-      top: 0;
+    .top-branch {
+      top: 20px;
     }
-    
-    .bottom-line {
-      bottom: 0;
+    .bottom-branch {
+      bottom: 20px;
     }
-    
-    .specialization-boxes {
+    .specializations {
       display: flex;
       flex-direction: column;
-      margin-left: 0;
+      justify-content: space-between;
+      height: 140px;
     }
-    
-    .specialization-row {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 10px;
+    .specialization {
+      margin-left: 10px;
     }
-    
     .specialization-title {
       font-weight: bold;
       margin-bottom: 10px;
-      font-size: 0.9em;
     }
-    
-    .units-container {
+    .specialization-units {
       display: flex;
     }
-    
-    .unit-box {
-      padding: 10px;
-      border-radius: 5px;
-      margin-right: 10px;
+    .unit {
+      width: 80px;
+      height: 40px;
       color: white;
       font-weight: bold;
-      width: 100px;
-      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+      margin-right: 10px;
     }
-    
-    .big-data-unit {
+    .bigdata-unit {
       background-color: #70ad47;
     }
-    
     .cyber-unit {
       background-color: #ed7d31;
     }
@@ -181,11 +165,12 @@
       
       <!-- SLIDE 1 -->
       <section>
-        <h1>Adaptation du référentiel Ingétis</h1>
-        <h2>Pour une formation Master axée<br>Big Data et Cybersécurité</h2>
-        <div class="logo-container">
-          <img class="logo" src="./images/logo-ecoleit.png" alt="Logo Ecole IT">
-          <img class="logo" src="./images/logo-ingetis.png" alt="Logo Ingétis">
+        <h1>ADAPTATION DU<br>RÉFÉRENTIEL INGÉTIS</h1>
+        <h2>POUR UNE FORMATION MASTER AXÉE<br>BIG DATA ET CYBERSÉCURITÉ</h2>
+        
+        <div class="logos">
+          <img src="./images/logo-ecoleit.png" alt="Logo Ecole IT">
+          <img src="./images/logo-ingetis.png" alt="Logo Ingétis">
         </div>
       </section>
 
@@ -239,7 +224,6 @@
       <section>
         <h2>Structure proposée</h2>
         
-        <h3>Architecture par étudiant</h3>
         <ul>
           <li><strong>1 unité</strong> de tronc commun (compétences transversales)</li>
           <li><strong>2 unités</strong> de spécialisation au choix:
@@ -250,34 +234,9 @@
           </li>
         </ul>
         
-        <!-- Diagramme simplifié -->
-        <div class="simple-diagram">
-          <div class="diagram-row">
-            <div class="tronc-commun-box">TRONC<br>COMMUN<br>(1 UNITÉ)</div>
-            <div class="connector-line"></div>
-            <div style="display: flex; flex-direction: column; align-items: center;">
-              <div style="height: 110px; width: 2px; background-color: #333; position: relative;">
-                <div style="position: absolute; top: 0; right: 0; width: 60px; height: 2px; background-color: #333;"></div>
-                <div style="position: absolute; bottom: 0; right: 0; width: 60px; height: 2px; background-color: #333;"></div>
-              </div>
-            </div>
-            <div style="display: flex; flex-direction: column; margin-left: 0;">
-              <div style="margin-bottom: 30px;">
-                <div style="font-weight: bold; margin-bottom: 10px;">BIG DATA</div>
-                <div style="display: flex;">
-                  <div class="unit-box big-data-unit">UNITÉ 1</div>
-                  <div class="unit-box big-data-unit">UNITÉ 2</div>
-                </div>
-              </div>
-              <div>
-                <div style="font-weight: bold; margin-bottom: 10px;">CYBERSÉCURITÉ</div>
-                <div style="display: flex;">
-                  <div class="unit-box cyber-unit">UNITÉ 1</div>
-                  <div class="unit-box cyber-unit">UNITÉ 2</div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <!-- Diagramme horizontal ultra-simplifié -->
+        <div style="text-align: center; margin-top: 50px;">
+          <img src="./images/diagram.png" alt="Diagramme de la structure de formation" style="max-width: 600px;">
         </div>
       </section>
 
@@ -457,11 +416,12 @@
       <section>
         <h1>Merci de votre attention</h1>
         <br>
-        <h3>Contact</h3>
-        <p>[Vos coordonnées]</p>
-        <div class="logo-container">
-          <img class="logo" src="./images/logo-ecoleit.png" alt="Logo Ecole IT">
-          <img class="logo" src="./images/logo-ingetis.png" alt="Logo Ingétis">
+        <h3 style="text-align: center;">Contact</h3>
+        <p style="text-align: center;">[Vos coordonnées]</p>
+        
+        <div class="logos">
+          <img src="./images/logo-ecoleit.png" alt="Logo Ecole IT">
+          <img src="./images/logo-ingetis.png" alt="Logo Ingétis">
         </div>
       </section>
 
@@ -473,16 +433,14 @@
     Reveal.initialize({
       controls: true,
       progress: true,
-      center: true,
+      center: false,
       hash: true,
-      transition: 'slide',
+      transition: 'fade',
       width: "100%",
       height: "100%",
       margin: 0.05,
       minScale: 0.5,
-      maxScale: 1.5,
-      slideNumber: false,
-      overview: true
+      maxScale: 1.5
     });
   </script>
 </body>
