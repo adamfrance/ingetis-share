@@ -65,56 +65,130 @@
       height: 50px;
       margin: 0 10px;
     }
-    .architecture-diagram {
+    
+    /* Styles pour le diagramme horizontal */
+    .horizontal-diagram {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 30px auto;
       width: 90%;
-      max-width: 700px;
-      margin: 0 auto;
-      padding-top: 20px;
+      max-width: 900px;
+      position: relative;
+      height: 300px;
     }
-    .diagram-box {
+    
+    .diagram-block {
       border-radius: 5px;
       padding: 10px;
       margin: 10px;
       color: white;
       font-weight: bold;
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 90px;
     }
-    .diagram-tc {
+    
+    .tronc-commun {
       background-color: #4472c4;
-      width: 60%;
-      margin: 0 auto 20px auto;
+      width: 150px;
+      height: 120px;
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
     }
-    .diagram-options {
+    
+    .connection-line-horizontal {
+      height: 2px;
+      background-color: #333;
+      position: absolute;
+      left: 170px;
+      width: 80px;
+      top: 50%;
+      z-index: 0;
+    }
+    
+    .connection-vertical {
+      position: absolute;
+      left: 250px;
+      top: 30px;
+      height: 240px;
+      width: 2px;
+      background-color: #333;
+    }
+    
+    .connection-horizontal-top {
+      position: absolute;
+      left: 250px;
+      top: 30px;
+      height: 2px;
+      width: 60px;
+      background-color: #333;
+    }
+    
+    .connection-horizontal-bottom {
+      position: absolute;
+      left: 250px;
+      top: 270px;
+      height: 2px;
+      width: 60px;
+      background-color: #333;
+    }
+    
+    .specialization-container {
       display: flex;
-      justify-content: space-around;
+      flex-direction: column;
+      position: absolute;
+      right: 10px;
+      width: 460px;
     }
-    .diagram-bd {
+    
+    .specialization-top {
+      position: absolute;
+      top: 20px;
+      right: 10px;
+    }
+    
+    .specialization-bottom {
+      position: absolute;
+      bottom: 20px;
+      right: 10px;
+    }
+    
+    .specialization-title {
+      font-weight: bold;
+      margin-bottom: 10px;
+      font-size: 1.1em;
+    }
+    
+    .unit-container {
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .unit {
+      width: 200px;
+      height: 80px;
+      border-radius: 5px;
+      margin: 0 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-weight: bold;
+    }
+    
+    .big-data-unit {
       background-color: #70ad47;
-      width: 40%;
     }
-    .diagram-cs {
+    
+    .cyber-unit {
       background-color: #ed7d31;
-      width: 40%;
-    }
-    .diagram-line {
-      border-left: 2px solid #333;
-      height: 20px;
-      margin: 0 auto;
-    }
-    .diagram-split {
-      display: flex;
-      width: 60%;
-      margin: 0 auto;
-    }
-    .diagram-split-left, .diagram-split-right {
-      width: 50%;
-      border-top: 2px solid #333;
-      margin-top: 10px;
-    }
-    .diagram-line-left, .diagram-line-right {
-      border-left: 2px solid #333;
-      height: 20px;
-      margin: 0 auto;
     }
   </style>
 </head>
@@ -193,22 +267,33 @@
           </li>
         </ul>
         
-        <!-- Nouvelle version du diagramme en HTML pur -->
-        <div class="architecture-diagram">
-          <div class="diagram-box diagram-tc">TRONC COMMUN (1 UNITÉ)</div>
-          <div class="diagram-line"></div>
-          <div class="diagram-split">
-            <div class="diagram-split-left"></div>
-            <div class="diagram-split-right"></div>
-          </div>
-          <div class="diagram-options">
-            <div style="width: 45%;">
-              <div class="diagram-line-left"></div>
-              <div class="diagram-box diagram-bd">BIG DATA (2 UNITÉS)</div>
+        <!-- Nouveau diagramme horizontal -->
+        <div class="horizontal-diagram">
+          <!-- Tronc commun -->
+          <div class="diagram-block tronc-commun">TRONC COMMUN<br>(1 UNITÉ)</div>
+          
+          <!-- Lignes de connexion -->
+          <div class="connection-line-horizontal"></div>
+          <div class="connection-vertical"></div>
+          <div class="connection-horizontal-top"></div>
+          <div class="connection-horizontal-bottom"></div>
+          
+          <!-- Conteneurs de spécialisation -->
+          <div class="specialization-container">
+            <div class="specialization-top">
+              <div class="specialization-title">BIG DATA</div>
+              <div class="unit-container">
+                <div class="unit big-data-unit">UNITÉ 1</div>
+                <div class="unit big-data-unit">UNITÉ 2</div>
+              </div>
             </div>
-            <div style="width: 45%;">
-              <div class="diagram-line-right"></div>
-              <div class="diagram-box diagram-cs">CYBERSÉCURITÉ (2 UNITÉS)</div>
+            
+            <div class="specialization-bottom">
+              <div class="specialization-title">CYBERSÉCURITÉ</div>
+              <div class="unit-container">
+                <div class="unit cyber-unit">UNITÉ 1</div>
+                <div class="unit cyber-unit">UNITÉ 2</div>
+              </div>
             </div>
           </div>
         </div>
