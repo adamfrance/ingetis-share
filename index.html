@@ -65,6 +65,57 @@
       height: 50px;
       margin: 0 10px;
     }
+    .architecture-diagram {
+      width: 90%;
+      max-width: 700px;
+      margin: 0 auto;
+      padding-top: 20px;
+    }
+    .diagram-box {
+      border-radius: 5px;
+      padding: 10px;
+      margin: 10px;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+    }
+    .diagram-tc {
+      background-color: #4472c4;
+      width: 60%;
+      margin: 0 auto 20px auto;
+    }
+    .diagram-options {
+      display: flex;
+      justify-content: space-around;
+    }
+    .diagram-bd {
+      background-color: #70ad47;
+      width: 40%;
+    }
+    .diagram-cs {
+      background-color: #ed7d31;
+      width: 40%;
+    }
+    .diagram-line {
+      border-left: 2px solid #333;
+      height: 20px;
+      margin: 0 auto;
+    }
+    .diagram-split {
+      display: flex;
+      width: 60%;
+      margin: 0 auto;
+    }
+    .diagram-split-left, .diagram-split-right {
+      width: 50%;
+      border-top: 2px solid #333;
+      margin-top: 10px;
+    }
+    .diagram-line-left, .diagram-line-right {
+      border-left: 2px solid #333;
+      height: 20px;
+      margin: 0 auto;
+    }
   </style>
 </head>
 <body>
@@ -76,8 +127,8 @@
         <h1>Adaptation du référentiel Ingétis</h1>
         <h2>Pour une formation Master axée<br>Big Data et Cybersécurité</h2>
         <div class="logo-container">
-          <img class="logo" src="images/logo-ecoleit.png" alt="Logo Ecole IT">
-          <img class="logo" src="images/logo-ingetis.png" alt="Logo Ingétis">
+          <img class="logo" src="./images/logo-ecoleit.png" alt="Logo Ecole IT">
+          <img class="logo" src="./images/logo-ingetis.png" alt="Logo Ingétis">
         </div>
       </section>
 
@@ -142,27 +193,24 @@
           </li>
         </ul>
         
-        <div style="text-align: center; margin-top: 20px;">
-          <svg width="500" height="200" style="max-width: 100%;">
-            <!-- Tronc commun -->
-            <rect x="100" y="30" width="300" height="40" rx="5" fill="#4472c4" opacity="0.8"></rect>
-            <text x="250" y="55" text-anchor="middle" fill="white" font-weight="bold">TRONC COMMUN (1 UNITÉ)</text>
-            
-            <!-- Big Data -->
-            <rect x="50" y="120" width="180" height="50" rx="5" fill="#70ad47" opacity="0.8"></rect>
-            <text x="140" y="150" text-anchor="middle" fill="white" font-weight="bold">BIG DATA (2 UNITÉS)</text>
-            
-            <!-- Cybersécurité -->
-            <rect x="270" y="120" width="180" height="50" rx="5" fill="#ed7d31" opacity="0.8"></rect>
-            <text x="360" y="150" text-anchor="middle" fill="white" font-weight="bold">CYBERSÉCURITÉ (2 UNITÉS)</text>
-            
-            <!-- Flèches -->
-            <line x1="250" y1="70" x2="250" y2="85" stroke="#333" stroke-width="2"></line>
-            <line x1="250" y1="85" x2="140" y2="85" stroke="#333" stroke-width="2"></line>
-            <line x1="250" y1="85" x2="360" y2="85" stroke="#333" stroke-width="2"></line>
-            <line x1="140" y1="85" x2="140" y2="120" stroke="#333" stroke-width="2"></line>
-            <line x1="360" y1="85" x2="360" y2="120" stroke="#333" stroke-width="2"></line>
-          </svg>
+        <!-- Nouvelle version du diagramme en HTML pur -->
+        <div class="architecture-diagram">
+          <div class="diagram-box diagram-tc">TRONC COMMUN (1 UNITÉ)</div>
+          <div class="diagram-line"></div>
+          <div class="diagram-split">
+            <div class="diagram-split-left"></div>
+            <div class="diagram-split-right"></div>
+          </div>
+          <div class="diagram-options">
+            <div style="width: 45%;">
+              <div class="diagram-line-left"></div>
+              <div class="diagram-box diagram-bd">BIG DATA (2 UNITÉS)</div>
+            </div>
+            <div style="width: 45%;">
+              <div class="diagram-line-right"></div>
+              <div class="diagram-box diagram-cs">CYBERSÉCURITÉ (2 UNITÉS)</div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -345,8 +393,8 @@
         <h3>Contact</h3>
         <p>[Vos coordonnées]</p>
         <div class="logo-container">
-          <img class="logo" src="images/logo-ecoleit.png" alt="Logo Ecole IT">
-          <img class="logo" src="images/logo-ingetis.png" alt="Logo Ingétis">
+          <img class="logo" src="./images/logo-ecoleit.png" alt="Logo Ecole IT">
+          <img class="logo" src="./images/logo-ingetis.png" alt="Logo Ingétis">
         </div>
       </section>
 
