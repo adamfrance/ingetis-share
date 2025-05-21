@@ -13,74 +13,87 @@
       font-family: Arial, sans-serif;
     }
     .reveal {
-      font-size: 30px;
+      font-size: 28px;
     }
     .reveal .slides {
-      text-align: left;
+      text-align: center;
     }
     .reveal h1 {
-      font-size: 2em;
-      color: #003366;
+      font-size: 2.2em;
+      color: #1a1f4b; /* Bleu marine foncé de l'École IT */
       text-align: center;
+      margin-bottom: 20px;
     }
     .reveal h2 {
-      font-size: 1.5em;
-      color: #004c99;
+      font-size: 1.6em;
+      color: #1a1f4b; /* Bleu marine foncé de l'École IT */
       text-align: center;
+      margin-bottom: 30px;
     }
     .reveal h3 {
-      font-size: 1.2em;
-      color: #0066cc;
+      font-size: 1.3em;
+      color: #1a1f4b; /* Bleu marine foncé de l'École IT */
+      text-align: center;
+      margin-bottom: 20px;
     }
     .reveal ul {
-      display: block;
+      display: inline-block;
+      text-align: left;
+      margin: 0 auto;
       font-size: 0.9em;
+      max-width: 80%;
     }
     .reveal li {
-      margin-bottom: 0.3em;
+      margin-bottom: 0.5em;
     }
     .highlight {
-      color: #e63946;
+      color: #d72c87; /* Rose/fuchsia de l'École IT */
       font-weight: bold;
     }
     .success {
-      color: #2a9d8f;
+      color: #07b571; /* Vert, complémentaire pour les éléments positifs */
       font-weight: bold;
     }
     .highlight-box {
-      background-color: #f8f9fa;
-      border-left: 4px solid #0066cc;
-      padding: 8px;
-      margin: 10px 0;
+      background-color: #f5f5f8; /* Fond légèrement bleuté */
+      border-left: 4px solid #d72c87; /* Bordure rose/fuchsia */
+      padding: 15px;
+      margin: 20px auto;
+      max-width: 80%;
+      text-align: left;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-    .two-columns {
-      display: flex;
-      justify-content: space-between;
-    }
-    .column {
-      flex: 1;
-      padding: 0 10px;
-    }
-    .logos-container {
+    
+    /* Logo containers avec fond blanc pour visibilité sur fond bleu */
+    .logo-row {
+      margin-top: 60px;
       display: flex;
       justify-content: center;
-      margin-top: 50px;
     }
-    .logo {
+    .logo-row img {
       height: 60px;
-      margin: 0 30px;
+      margin: 0 20px;
+      background-color: white;
+      padding: 10px;
+      border-radius: 8px;
     }
-    .footer-logos {
-      position: fixed;
-      bottom: 20px;
-      left: 0;
-      width: 100%;
-      display: flex;
-      justify-content: space-around;
-      z-index: 10;
+    
+    /* Style adapté pour le diagramme aux couleurs de l'École IT */
+    .diagram-container {
+      background-color: rgba(245, 245, 248, 0.5);
+      padding: 15px;
+      border-radius: 8px;
     }
-    .footer-logos img {
-      height: 40px;
+    
+    /* Couleur de fond bleu marine pour les slides */
+    .reveal .slides section.blue-background {
+      background-color: #1a1f4b;
+      color: white;
+    }
+    .reveal .slides section.blue-background h1,
+    .reveal .slides section.blue-background h2,
+    .reveal .slides section.blue-background h3 {
+      color: white;
     }
   </style>
 </head>
@@ -88,14 +101,14 @@
   <div class="reveal">
     <div class="slides">
       
-      <!-- SLIDE 1 -->
-      <section>
+      <!-- SLIDE 1 - Fond bleu marine comme sur le site -->
+      <section class="blue-background">
         <h1>ADAPTATION DU<br>RÉFÉRENTIEL INGÉTIS</h1>
         <h2>POUR UNE FORMATION MASTER AXÉE<br>BIG DATA ET CYBERSÉCURITÉ</h2>
         
-        <div class="logos-container">
-          <img class="logo" src="./images/logo-ecoleit.png" alt="Logo Ecole IT">
-          <img class="logo" src="./images/logo-ingetis.png" alt="Logo Ingétis">
+        <div class="logo-row">
+          <img src="./images/logo-ecoleit.png" alt="Logo Ecole IT">
+          <img src="./images/logo-ingetis.png" alt="Logo Ingétis">
         </div>
       </section>
 
@@ -111,7 +124,12 @@
             <li>Partenariat stratégique pour notre école</li>
           </ul>
         </div>
-
+      </section>
+      
+      <!-- SLIDE 3 -->
+      <section>
+        <h2>Contexte et problématique</h2>
+        
         <div class="highlight-box">
           <h3>Problématique identifiée</h3>
           <ul>
@@ -122,7 +140,7 @@
         </div>
       </section>
 
-      <!-- SLIDE 3 - Séparé en deux (Partie 1) -->
+      <!-- SLIDE 4 -->
       <section>
         <h2>Notre vision de formation</h2>
         
@@ -136,7 +154,7 @@
         </div>
       </section>
       
-      <!-- SLIDE 3 - Séparé en deux (Partie 2) -->
+      <!-- SLIDE 5 -->
       <section>
         <h2>Notre vision de formation</h2>
         
@@ -150,7 +168,7 @@
         </div>
       </section>
 
-      <!-- SLIDE 4 -->
+      <!-- SLIDE 6 -->
       <section>
         <h2>Structure proposée</h2>
         
@@ -164,13 +182,42 @@
           </li>
         </ul>
         
-        <!-- Diagramme horizontal ultra-simplifié -->
-        <div style="text-align: center; margin-top: 50px;">
-          <img src="./images/diagram.png" alt="Diagramme de la structure de formation" style="max-width: 600px;">
+        <!-- Diagramme harmonisé aux couleurs -->
+        <div class="diagram-container" style="text-align: center; margin-top: 30px;">
+          <svg width="600" height="200" viewBox="0 0 600 200" style="max-width: 100%; height: auto;">
+            <!-- Tronc commun -->
+            <rect x="30" y="80" width="120" height="60" rx="5" fill="#1a1f4b"/>
+            <text x="90" y="105" text-anchor="middle" fill="white" font-size="14" font-weight="bold">TRONC COMMUN</text>
+            <text x="90" y="125" text-anchor="middle" fill="white" font-size="14" font-weight="bold">(1 UNITÉ)</text>
+            
+            <!-- Ligne de connexion -->
+            <line x1="150" y1="110" x2="210" y2="110" stroke="#333" stroke-width="2"/>
+            
+            <!-- Ligne verticale -->
+            <line x1="210" y1="60" x2="210" y2="160" stroke="#333" stroke-width="2"/>
+            
+            <!-- Lignes horizontales -->
+            <line x1="210" y1="60" x2="270" y2="60" stroke="#333" stroke-width="2"/>
+            <line x1="210" y1="160" x2="270" y2="160" stroke="#333" stroke-width="2"/>
+            
+            <!-- Big Data -->
+            <text x="300" y="35" text-anchor="left" fill="#1a1f4b" font-size="16" font-weight="bold">BIG DATA</text>
+            <rect x="270" y="40" width="80" height="40" rx="5" fill="#d72c87"/>
+            <text x="310" y="65" text-anchor="middle" fill="white" font-size="14" font-weight="bold">UNITÉ 1</text>
+            <rect x="360" y="40" width="80" height="40" rx="5" fill="#d72c87"/>
+            <text x="400" y="65" text-anchor="middle" fill="white" font-size="14" font-weight="bold">UNITÉ 2</text>
+            
+            <!-- Cybersécurité -->
+            <text x="300" y="135" text-anchor="left" fill="#1a1f4b" font-size="16" font-weight="bold">CYBERSÉCURITÉ</text>
+            <rect x="270" y="140" width="80" height="40" rx="5" fill="#d72c87"/>
+            <text x="310" y="165" text-anchor="middle" fill="white" font-size="14" font-weight="bold">UNITÉ 1</text>
+            <rect x="360" y="140" width="80" height="40" rx="5" fill="#d72c87"/>
+            <text x="400" y="165" text-anchor="middle" fill="white" font-size="14" font-weight="bold">UNITÉ 2</text>
+          </svg>
         </div>
       </section>
 
-      <!-- SLIDE 5 - Séparé en deux (Partie 1) -->
+      <!-- SLIDE 7 -->
       <section>
         <h2>Modifications clés du référentiel</h2>
         
@@ -185,7 +232,7 @@
         </div>
       </section>
       
-      <!-- SLIDE 5 - Séparé en deux (Partie 2) -->
+      <!-- SLIDE 8 -->
       <section>
         <h2>Modifications clés du référentiel</h2>
 
@@ -199,120 +246,134 @@
         </div>
       </section>
 
-      <!-- SLIDE 6 -->
-      <section>
-        <h2>Contenu du tronc commun (1 unité)</h2>
-        
-        <div class="two-columns">
-          <div class="column">
-            <h3>Modules proposés</h3>
-            <ul>
-              <li><strong>Gestion de projet et méthodologie agile</strong> (35h)</li>
-              <li><strong>Sécurité informatique fondamentale</strong> (21h)</li>
-              <li><strong>Modélisation et architecture des SI</strong> (35h)</li>
-              <li><strong>Innovation et veille technologique</strong> (21h)</li>
-              <li><strong>Management et communication</strong> (28h)</li>
-            </ul>
-          </div>
-          
-          <div class="column">
-            <h3>Compétences développées</h3>
-            <ul>
-              <li>Planification et pilotage de projets</li>
-              <li>Analyse de risques et sécurisation des systèmes</li>
-              <li>Communication et management d'équipe</li>
-              <li>Conception d'architectures informatiques</li>
-              <li>Veille et intelligence stratégique</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- SLIDE 7 -->
-      <section>
-        <h2>Contenu spécialisation Big Data (2 unités)</h2>
-        
-        <div class="two-columns">
-          <div class="column">
-            <h3>Unité Big Data 1</h3>
-            <ul>
-              <li><strong>Fondamentaux du Big Data</strong> (28h)</li>
-              <li><strong>Python avancé pour la Data Science</strong> (35h)</li>
-              <li><strong>Infrastructures de données distribuées</strong> (35h)</li>
-              <li><strong>Analyse statistique et visualisation</strong> (28h)</li>
-              <li><strong>Data engineering et ETL</strong> (35h)</li>
-            </ul>
-          </div>
-          
-          <div class="column">
-            <h3>Unité Big Data 2</h3>
-            <ul>
-              <li><strong>Machine Learning et Deep Learning</strong> (35h)</li>
-              <li><strong>Traitement du langage naturel</strong> (28h)</li>
-              <li><strong>Architectures cloud pour le Big Data</strong> (28h)</li>
-              <li><strong>Gouvernance et qualité des données</strong> (21h)</li>
-              <li><strong>Projet Big Data appliqué</strong> (49h)</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- SLIDE 8 -->
-      <section>
-        <h2>Contenu spécialisation Cybersécurité (2 unités)</h2>
-        
-        <div class="two-columns">
-          <div class="column">
-            <h3>Unité Cybersécurité 1</h3>
-            <ul>
-              <li><strong>Sécurité des réseaux avancée</strong> (35h)</li>
-              <li><strong>Tests d'intrusion et Red Team</strong> (35h)</li>
-              <li><strong>Défense et Blue Team</strong> (35h)</li>
-              <li><strong>Cryptographie appliquée</strong> (21h)</li>
-              <li><strong>Sécurité des systèmes</strong> (35h)</li>
-            </ul>
-          </div>
-          
-          <div class="column">
-            <h3>Unité Cybersécurité 2</h3>
-            <ul>
-              <li><strong>Analyse de malwares et forensics</strong> (28h)</li>
-              <li><strong>Sécurité cloud et DevSecOps</strong> (28h)</li>
-              <li><strong>Gouvernance de sécurité</strong> (21h)</li>
-              <li><strong>Réponse aux incidents</strong> (28h)</li>
-              <li><strong>Projet Cybersécurité appliqué</strong> (49h)</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
       <!-- SLIDE 9 -->
+      <section>
+        <h2>Contenu du tronc commun</h2>
+        
+        <div class="highlight-box">
+          <h3>Modules proposés</h3>
+          <ul>
+            <li><strong>Gestion de projet et méthodologie agile</strong> (35h)</li>
+            <li><strong>Sécurité informatique fondamentale</strong> (21h)</li>
+            <li><strong>Modélisation et architecture des SI</strong> (35h)</li>
+            <li><strong>Innovation et veille technologique</strong> (21h)</li>
+            <li><strong>Management et communication</strong> (28h)</li>
+          </ul>
+        </div>
+      </section>
+      
+      <!-- SLIDE 10 -->
+      <section>
+        <h2>Contenu du tronc commun</h2>
+        
+        <div class="highlight-box">
+          <h3>Compétences développées</h3>
+          <ul>
+            <li>Planification et pilotage de projets</li>
+            <li>Analyse de risques et sécurisation des systèmes</li>
+            <li>Communication et management d'équipe</li>
+            <li>Conception d'architectures informatiques</li>
+            <li>Veille et intelligence stratégique</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- SLIDE 11 -->
+      <section>
+        <h2>Contenu spécialisation Big Data</h2>
+        
+        <div class="highlight-box">
+          <h3>Unité Big Data 1</h3>
+          <ul>
+            <li><strong>Fondamentaux du Big Data</strong> (28h)</li>
+            <li><strong>Python avancé pour la Data Science</strong> (35h)</li>
+            <li><strong>Infrastructures de données distribuées</strong> (35h)</li>
+            <li><strong>Analyse statistique et visualisation</strong> (28h)</li>
+            <li><strong>Data engineering et ETL</strong> (35h)</li>
+          </ul>
+        </div>
+      </section>
+      
+      <!-- SLIDE 12 -->
+      <section>
+        <h2>Contenu spécialisation Big Data</h2>
+        
+        <div class="highlight-box">
+          <h3>Unité Big Data 2</h3>
+          <ul>
+            <li><strong>Machine Learning et Deep Learning</strong> (35h)</li>
+            <li><strong>Traitement du langage naturel</strong> (28h)</li>
+            <li><strong>Architectures cloud pour le Big Data</strong> (28h)</li>
+            <li><strong>Gouvernance et qualité des données</strong> (21h)</li>
+            <li><strong>Projet Big Data appliqué</strong> (49h)</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- SLIDE 13 -->
+      <section>
+        <h2>Contenu spécialisation Cybersécurité</h2>
+        
+        <div class="highlight-box">
+          <h3>Unité Cybersécurité 1</h3>
+          <ul>
+            <li><strong>Sécurité des réseaux avancée</strong> (35h)</li>
+            <li><strong>Tests d'intrusion et Red Team</strong> (35h)</li>
+            <li><strong>Défense et Blue Team</strong> (35h)</li>
+            <li><strong>Cryptographie appliquée</strong> (21h)</li>
+            <li><strong>Sécurité des systèmes</strong> (35h)</li>
+          </ul>
+        </div>
+      </section>
+      
+      <!-- SLIDE 14 -->
+      <section>
+        <h2>Contenu spécialisation Cybersécurité</h2>
+        
+        <div class="highlight-box">
+          <h3>Unité Cybersécurité 2</h3>
+          <ul>
+            <li><strong>Analyse de malwares et forensics</strong> (28h)</li>
+            <li><strong>Sécurité cloud et DevSecOps</strong> (28h)</li>
+            <li><strong>Gouvernance de sécurité</strong> (21h)</li>
+            <li><strong>Réponse aux incidents</strong> (28h)</li>
+            <li><strong>Projet Cybersécurité appliqué</strong> (49h)</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- SLIDE 15 -->
       <section>
         <h2>Avantages de notre proposition</h2>
         
-        <div class="two-columns">
-          <div class="column">
-            <div class="highlight-box">
-              <h3>Pour les étudiants</h3>
-              <ul>
-                <li>Formation plus spécialisée et approfondie</li>
-                <li>Évite les redondances avec le cycle Bachelor</li>
-                <li>Double compétence valorisée sur le marché</li>
-              </ul>
-            </div>
-          </div>
-          
-          <div class="column">
-            <div class="highlight-box">
-              <h3>Pour le référentiel</h3>
-              <ul>
-                <li>Conserve l'essence et la qualité du référentiel Ingétis</li>
-                <li>L'enrichit avec une composante Big Data stratégique</li>
-                <li>Maintient l'excellence académique</li>
-              </ul>
-            </div>
-          </div>
+        <div class="highlight-box">
+          <h3>Pour les étudiants</h3>
+          <ul>
+            <li>Formation plus spécialisée et approfondie</li>
+            <li>Évite les redondances avec le cycle Bachelor</li>
+            <li>Double compétence valorisée sur le marché</li>
+          </ul>
         </div>
+      </section>
+      
+      <!-- SLIDE 16 -->
+      <section>
+        <h2>Avantages de notre proposition</h2>
+        
+        <div class="highlight-box">
+          <h3>Pour le référentiel</h3>
+          <ul>
+            <li>Conserve l'essence et la qualité du référentiel Ingétis</li>
+            <li>L'enrichit avec une composante Big Data stratégique</li>
+            <li>Maintient l'excellence académique</li>
+          </ul>
+        </div>
+      </section>
+      
+      <!-- SLIDE 17 -->
+      <section>
+        <h2>Avantages de notre proposition</h2>
+        
         <div class="highlight-box">
           <h3>Pour le marché du travail</h3>
           <ul>
@@ -323,7 +384,7 @@
         </div>
       </section>
 
-      <!-- SLIDE 10 -->
+      <!-- SLIDE 18 -->
       <section>
         <h2>Conclusion et prochaines étapes</h2>
         
@@ -336,7 +397,12 @@
             <li>Organisation en unités d'enseignement flexibles</li>
           </ul>
         </div>
-
+      </section>
+      
+      <!-- SLIDE 19 -->
+      <section>
+        <h2>Conclusion et prochaines étapes</h2>
+        
         <div class="highlight-box">
           <h3>Prochaines étapes souhaitées</h3>
           <ul>
@@ -347,14 +413,13 @@
         </div>
       </section>
 
-      <!-- SLIDE 11 -->
-      <section>
-        <h1>Merci de votre attention</h1>
-        <br>
-        <h3 style="text-align: center;">Contact</h3>
-        <p style="text-align: center;">[Vos coordonnées]</p>
+      <!-- SLIDE 20 - Fond bleu marine comme sur le site -->
+      <section class="blue-background">
+        <h1 style="color: white;">MERCI DE VOTRE ATTENTION</h1>
+        <h3 style="color: white;">CONTACT</h3>
+        <p>[Vos coordonnées]</p>
         
-        <div class="footer-logos">
+        <div class="logo-row">
           <img src="./images/logo-ecoleit.png" alt="Logo Ecole IT">
           <img src="./images/logo-ingetis.png" alt="Logo Ingétis">
         </div>
@@ -368,7 +433,7 @@
     Reveal.initialize({
       controls: true,
       progress: true,
-      center: false,
+      center: true,
       hash: true,
       transition: 'fade',
       width: "100%",
