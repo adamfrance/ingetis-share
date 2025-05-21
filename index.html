@@ -9,22 +9,24 @@
   
   <style>
     .reveal h1 {
-      font-size: 2.2em;
+      font-size: 2em;
       color: #003366;
+      margin-bottom: 30px;
     }
     .reveal h2 {
-      font-size: 1.6em;
+      font-size: 1.5em;
       color: #004c99;
     }
     .reveal h3 {
-      font-size: 1.3em;
+      font-size: 1.2em;
       color: #0066cc;
     }
     .reveal ul {
       display: block;
+      font-size: 0.9em;
     }
     .reveal li {
-      margin-bottom: 0.5em;
+      margin-bottom: 0.4em;
     }
     .reveal .smaller {
       font-size: 0.8em;
@@ -40,8 +42,8 @@
     .highlight-box {
       background-color: #f8f9fa;
       border-left: 4px solid #0066cc;
-      padding: 15px;
-      margin: 20px 0;
+      padding: 10px;
+      margin: 15px 0;
     }
     .two-columns {
       display: flex;
@@ -50,6 +52,18 @@
     .column {
       flex: 1;
       padding: 0 10px;
+    }
+    .logo-container {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 30px;
+    }
+    .logo {
+      height: 50px;
+      margin: 0 10px;
     }
   </style>
 </head>
@@ -61,8 +75,10 @@
       <section>
         <h1>Adaptation du référentiel Ingétis</h1>
         <h2>Pour une formation Master axée<br>Big Data et Cybersécurité</h2>
-        <p><br></p>
-        <p class="smaller">Proposition d'évolution de programme</p>
+        <div class="logo-container">
+          <img class="logo" src="logo-ecoleit.png" alt="Logo Ecole IT">
+          <img class="logo" src="logo-ingetis.png" alt="Logo Ingétis">
+        </div>
       </section>
 
       <!-- SLIDE 2 -->
@@ -83,7 +99,7 @@
           <ul>
             <li><span class="highlight">Redondance :</span> Bloc développement en M1 déjà couvert dans notre cycle Bachelor</li>
             <li><span class="highlight">Manque :</span> Absence d'un parcours structuré en Big Data</li>
-            <li><span class="highlight">Besoin :</span> Former des experts dans deux domaines stratégiques (Big Data et Cybersécurité)</li>
+            <li><span class="highlight">Besoin :</span> Former des experts dans deux domaines stratégiques</li>
           </ul>
         </div>
       </section>
@@ -92,24 +108,22 @@
       <section>
         <h2>Notre vision de formation</h2>
         
-        <div class="two-columns">
-          <div class="column">
-            <h3>Ambition pédagogique</h3>
-            <ul>
-              <li>Former des experts hautement spécialisés et immédiatement opérationnels</li>
-              <li>Répondre aux besoins croissants du marché en Big Data et Cybersécurité</li>
-              <li>Proposer un parcours optimisé sans redondance avec le cycle Bachelor</li>
-            </ul>
-          </div>
-          
-          <div class="column">
-            <h3>Valeur ajoutée</h3>
-            <ul>
-              <li>Spécialisation plus poussée dans l'un des deux domaines d'expertise</li>
-              <li>Double compétence transversale recherchée par les entreprises</li>
-              <li>Alignement sur les tendances et besoins actuels du marché</li>
-            </ul>
-          </div>
+        <div class="highlight-box">
+          <h3>Ambition pédagogique</h3>
+          <ul>
+            <li>Former des experts hautement spécialisés et immédiatement opérationnels</li>
+            <li>Répondre aux besoins croissants du marché en Big Data et Cybersécurité</li>
+            <li>Proposer un parcours optimisé sans redondance avec le cycle Bachelor</li>
+          </ul>
+        </div>
+        
+        <div class="highlight-box">
+          <h3>Valeur ajoutée</h3>
+          <ul>
+            <li>Spécialisation plus poussée dans l'un des deux domaines d'expertise</li>
+            <li>Double compétence transversale recherchée par les entreprises</li>
+            <li>Alignement sur les tendances et besoins actuels du marché</li>
+          </ul>
         </div>
       </section>
 
@@ -129,25 +143,25 @@
         </ul>
         
         <div style="text-align: center; margin-top: 20px;">
-          <svg width="600" height="300" style="max-width: 100%;">
+          <svg width="500" height="200" style="max-width: 100%;">
             <!-- Tronc commun -->
-            <rect x="150" y="30" width="300" height="60" rx="5" fill="#4472c4" opacity="0.8"></rect>
-            <text x="300" y="65" text-anchor="middle" fill="white" font-weight="bold">TRONC COMMUN (1 UNITÉ)</text>
+            <rect x="100" y="30" width="300" height="40" rx="5" fill="#4472c4" opacity="0.8"></rect>
+            <text x="250" y="55" text-anchor="middle" fill="white" font-weight="bold">TRONC COMMUN (1 UNITÉ)</text>
             
             <!-- Big Data -->
-            <rect x="50" y="170" width="220" height="100" rx="5" fill="#70ad47" opacity="0.8"></rect>
-            <text x="160" y="215" text-anchor="middle" fill="white" font-weight="bold">SPÉCIALISATION<br/>BIG DATA<br/>(2 UNITÉS)</text>
+            <rect x="50" y="120" width="180" height="50" rx="5" fill="#70ad47" opacity="0.8"></rect>
+            <text x="140" y="150" text-anchor="middle" fill="white" font-weight="bold">BIG DATA (2 UNITÉS)</text>
             
             <!-- Cybersécurité -->
-            <rect x="330" y="170" width="220" height="100" rx="5" fill="#ed7d31" opacity="0.8"></rect>
-            <text x="440" y="215" text-anchor="middle" fill="white" font-weight="bold">SPÉCIALISATION<br/>CYBERSÉCURITÉ<br/>(2 UNITÉS)</text>
+            <rect x="270" y="120" width="180" height="50" rx="5" fill="#ed7d31" opacity="0.8"></rect>
+            <text x="360" y="150" text-anchor="middle" fill="white" font-weight="bold">CYBERSÉCURITÉ (2 UNITÉS)</text>
             
             <!-- Flèches -->
-            <line x1="300" y1="90" x2="300" y2="110" stroke="#333" stroke-width="2"></line>
-            <line x1="300" y1="110" x2="160" y2="110" stroke="#333" stroke-width="2"></line>
-            <line x1="300" y1="110" x2="440" y2="110" stroke="#333" stroke-width="2"></line>
-            <line x1="160" y1="110" x2="160" y2="170" stroke="#333" stroke-width="2"></line>
-            <line x1="440" y1="110" x2="440" y2="170" stroke="#333" stroke-width="2"></line>
+            <line x1="250" y1="70" x2="250" y2="85" stroke="#333" stroke-width="2"></line>
+            <line x1="250" y1="85" x2="140" y2="85" stroke="#333" stroke-width="2"></line>
+            <line x1="250" y1="85" x2="360" y2="85" stroke="#333" stroke-width="2"></line>
+            <line x1="140" y1="85" x2="140" y2="120" stroke="#333" stroke-width="2"></line>
+            <line x1="360" y1="85" x2="360" y2="120" stroke="#333" stroke-width="2"></line>
           </svg>
         </div>
       </section>
@@ -189,7 +203,6 @@
               <li><strong>Modélisation et architecture des SI</strong> (35h)</li>
               <li><strong>Innovation et veille technologique</strong> (21h)</li>
               <li><strong>Management et communication</strong> (28h)</li>
-              <li><strong>Conformité et aspects juridiques</strong> (21h)</li>
             </ul>
           </div>
           
@@ -201,7 +214,6 @@
               <li>Communication et management d'équipe</li>
               <li>Conception d'architectures informatiques</li>
               <li>Veille et intelligence stratégique</li>
-              <li>Adaptation aux normes et réglementations</li>
             </ul>
           </div>
         </div>
@@ -248,7 +260,7 @@
               <li><strong>Tests d'intrusion et Red Team</strong> (35h)</li>
               <li><strong>Défense et Blue Team</strong> (35h)</li>
               <li><strong>Cryptographie appliquée</strong> (21h)</li>
-              <li><strong>Sécurité des systèmes et applications</strong> (35h)</li>
+              <li><strong>Sécurité des systèmes</strong> (35h)</li>
             </ul>
           </div>
           
@@ -257,7 +269,7 @@
             <ul>
               <li><strong>Analyse de malwares et forensics</strong> (28h)</li>
               <li><strong>Sécurité cloud et DevSecOps</strong> (28h)</li>
-              <li><strong>Gouvernance et conformité de sécurité</strong> (21h)</li>
+              <li><strong>Gouvernance de sécurité</strong> (21h)</li>
               <li><strong>Réponse aux incidents</strong> (28h)</li>
               <li><strong>Projet Cybersécurité appliqué</strong> (49h)</li>
             </ul>
@@ -269,15 +281,29 @@
       <section>
         <h2>Avantages de notre proposition</h2>
         
-        <div class="highlight-box">
-          <h3>Pour les étudiants</h3>
-          <ul>
-            <li>Formation plus spécialisée et approfondie</li>
-            <li>Évite les redondances avec le cycle Bachelor</li>
-            <li>Double compétence valorisée sur le marché</li>
-          </ul>
+        <div class="two-columns">
+          <div class="column">
+            <div class="highlight-box">
+              <h3>Pour les étudiants</h3>
+              <ul>
+                <li>Formation plus spécialisée et approfondie</li>
+                <li>Évite les redondances avec le cycle Bachelor</li>
+                <li>Double compétence valorisée sur le marché</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="column">
+            <div class="highlight-box">
+              <h3>Pour le référentiel</h3>
+              <ul>
+                <li>Conserve l'essence et la qualité du référentiel Ingétis</li>
+                <li>L'enrichit avec une composante Big Data stratégique</li>
+                <li>Maintient l'excellence académique</li>
+              </ul>
+            </div>
+          </div>
         </div>
-
         <div class="highlight-box">
           <h3>Pour le marché du travail</h3>
           <ul>
@@ -286,43 +312,9 @@
             <li>Compétences à jour sur les technologies émergentes</li>
           </ul>
         </div>
-
-        <div class="highlight-box">
-          <h3>Pour le référentiel</h3>
-          <ul>
-            <li>Conserve l'essence et la qualité du référentiel Ingétis</li>
-            <li>L'enrichit avec une composante Big Data stratégique</li>
-            <li>Maintient l'excellence académique</li>
-          </ul>
-        </div>
       </section>
 
       <!-- SLIDE 10 -->
-      <section>
-        <h2>Mise en œuvre et déploiement</h2>
-        
-        <div class="two-columns">
-          <div class="column">
-            <h3>Calendrier proposé</h3>
-            <ul>
-              <li>Phase de validation: [Date]</li>
-              <li>Adaptation des programmes: [Date]</li>
-              <li>Déploiement: Rentrée [Année]</li>
-            </ul>
-          </div>
-          
-          <div class="column">
-            <h3>Ressources nécessaires</h3>
-            <ul>
-              <li>Collaboration avec vos équipes pédagogiques</li>
-              <li>Validation des contenus et volumes horaires</li>
-              <li>Expertise technique pour les nouveaux modules</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- SLIDE 11 -->
       <section>
         <h2>Conclusion et prochaines étapes</h2>
         
@@ -346,12 +338,16 @@
         </div>
       </section>
 
-      <!-- SLIDE 12 -->
+      <!-- SLIDE 11 -->
       <section>
         <h1>Merci de votre attention</h1>
-        <p><br></p>
+        <br>
         <h3>Contact</h3>
         <p>[Vos coordonnées]</p>
+        <div class="logo-container">
+          <img class="logo" src="logo-ecoleit.png" alt="Logo Ecole IT">
+          <img class="logo" src="logo-ingetis.png" alt="Logo Ingétis">
+        </div>
       </section>
 
     </div>
@@ -365,8 +361,11 @@
       center: true,
       hash: true,
       transition: 'slide',
-      // Pour ajouter des plugins comme le zoom, notes, etc.
-      // plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+      width: "100%",
+      height: "100%",
+      margin: 0.1,
+      minScale: 0.5,
+      maxScale: 1.5
     });
   </script>
 </body>
