@@ -8,28 +8,32 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/theme/white.min.css" id="theme">
   
   <style>
+    .reveal {
+      font-size: 30px; /* Base font size increase */
+    }
     .reveal h1 {
-      font-size: 2em;
+      font-size: 1.8em;
       color: #003366;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
     }
     .reveal h2 {
-      font-size: 1.5em;
+      font-size: 1.4em;
       color: #004c99;
+      margin-bottom: 20px;
     }
     .reveal h3 {
-      font-size: 1.2em;
+      font-size: 1.1em;
       color: #0066cc;
     }
     .reveal ul {
       display: block;
-      font-size: 0.9em;
+      font-size: 0.8em;
     }
     .reveal li {
-      margin-bottom: 0.4em;
+      margin-bottom: 0.3em;
     }
     .reveal .smaller {
-      font-size: 0.8em;
+      font-size: 0.7em;
     }
     .reveal .highlight {
       color: #e63946;
@@ -42,8 +46,8 @@
     .highlight-box {
       background-color: #f8f9fa;
       border-left: 4px solid #0066cc;
-      padding: 10px;
-      margin: 15px 0;
+      padding: 8px;
+      margin: 10px 0;
     }
     .two-columns {
       display: flex;
@@ -62,125 +66,104 @@
       padding: 0 30px;
     }
     .logo {
-      height: 50px;
+      height: 40px;
       margin: 0 10px;
     }
     
-    /* Styles pour le diagramme horizontal */
-    .horizontal-diagram {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    /* Simple horizontal diagram */
+    .simple-diagram {
       margin: 30px auto;
-      width: 90%;
-      max-width: 900px;
+      max-width: 800px;
       position: relative;
-      height: 300px;
-    }
-    
-    .diagram-block {
-      border-radius: 5px;
-      padding: 10px;
-      margin: 10px;
-      color: white;
-      font-weight: bold;
-      text-align: center;
+      height: auto;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      height: 90px;
     }
     
-    .tronc-commun {
+    .diagram-row {
+      display: flex;
+      width: 100%;
+      justify-content: flex-start;
+      margin-bottom: 20px;
+      align-items: center;
+    }
+    
+    .tronc-commun-box {
       background-color: #4472c4;
+      color: white;
+      padding: 15px;
+      border-radius: 5px;
+      text-align: center;
       width: 150px;
-      height: 120px;
-      position: absolute;
-      left: 20px;
-      top: 50%;
-      transform: translateY(-50%);
-      z-index: 1;
+      font-weight: bold;
     }
     
-    .connection-line-horizontal {
+    .connector-line {
+      width: 60px;
       height: 2px;
       background-color: #333;
-      position: absolute;
-      left: 170px;
-      width: 80px;
-      top: 50%;
-      z-index: 0;
     }
     
-    .connection-vertical {
-      position: absolute;
-      left: 250px;
-      top: 30px;
-      height: 240px;
+    .vertical-line {
       width: 2px;
+      height: 110px;
       background-color: #333;
+      position: relative;
     }
     
-    .connection-horizontal-top {
-      position: absolute;
-      left: 250px;
-      top: 30px;
-      height: 2px;
-      width: 60px;
-      background-color: #333;
-    }
-    
-    .connection-horizontal-bottom {
-      position: absolute;
-      left: 250px;
-      top: 270px;
-      height: 2px;
-      width: 60px;
-      background-color: #333;
-    }
-    
-    .specialization-container {
+    .fork-lines {
       display: flex;
       flex-direction: column;
-      position: absolute;
-      right: 10px;
-      width: 460px;
+      height: 100px;
+      position: relative;
     }
     
-    .specialization-top {
+    .top-line, .bottom-line {
+      width: 60px;
+      height: 2px;
+      background-color: #333;
       position: absolute;
-      top: 20px;
-      right: 10px;
     }
     
-    .specialization-bottom {
-      position: absolute;
-      bottom: 20px;
-      right: 10px;
+    .top-line {
+      top: 0;
+    }
+    
+    .bottom-line {
+      bottom: 0;
+    }
+    
+    .specialization-boxes {
+      display: flex;
+      flex-direction: column;
+      margin-left: 0;
+    }
+    
+    .specialization-row {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
     }
     
     .specialization-title {
       font-weight: bold;
       margin-bottom: 10px;
-      font-size: 1.1em;
+      font-size: 0.9em;
     }
     
-    .unit-container {
+    .units-container {
       display: flex;
-      justify-content: space-between;
     }
     
-    .unit {
-      width: 200px;
-      height: 80px;
+    .unit-box {
+      padding: 10px;
       border-radius: 5px;
-      margin: 0 10px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      margin-right: 10px;
       color: white;
       font-weight: bold;
+      width: 100px;
+      text-align: center;
     }
     
     .big-data-unit {
@@ -236,7 +219,7 @@
         <div class="highlight-box">
           <h3>Ambition pédagogique</h3>
           <ul>
-            <li>Former des experts hautement spécialisés et immédiatement opérationnels</li>
+            <li>Former des experts hautement spécialisés et opérationnels</li>
             <li>Répondre aux besoins croissants du marché en Big Data et Cybersécurité</li>
             <li>Proposer un parcours optimisé sans redondance avec le cycle Bachelor</li>
           </ul>
@@ -267,32 +250,31 @@
           </li>
         </ul>
         
-        <!-- Nouveau diagramme horizontal -->
-        <div class="horizontal-diagram">
-          <!-- Tronc commun -->
-          <div class="diagram-block tronc-commun">TRONC COMMUN<br>(1 UNITÉ)</div>
-          
-          <!-- Lignes de connexion -->
-          <div class="connection-line-horizontal"></div>
-          <div class="connection-vertical"></div>
-          <div class="connection-horizontal-top"></div>
-          <div class="connection-horizontal-bottom"></div>
-          
-          <!-- Conteneurs de spécialisation -->
-          <div class="specialization-container">
-            <div class="specialization-top">
-              <div class="specialization-title">BIG DATA</div>
-              <div class="unit-container">
-                <div class="unit big-data-unit">UNITÉ 1</div>
-                <div class="unit big-data-unit">UNITÉ 2</div>
+        <!-- Diagramme simplifié -->
+        <div class="simple-diagram">
+          <div class="diagram-row">
+            <div class="tronc-commun-box">TRONC<br>COMMUN<br>(1 UNITÉ)</div>
+            <div class="connector-line"></div>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+              <div style="height: 110px; width: 2px; background-color: #333; position: relative;">
+                <div style="position: absolute; top: 0; right: 0; width: 60px; height: 2px; background-color: #333;"></div>
+                <div style="position: absolute; bottom: 0; right: 0; width: 60px; height: 2px; background-color: #333;"></div>
               </div>
             </div>
-            
-            <div class="specialization-bottom">
-              <div class="specialization-title">CYBERSÉCURITÉ</div>
-              <div class="unit-container">
-                <div class="unit cyber-unit">UNITÉ 1</div>
-                <div class="unit cyber-unit">UNITÉ 2</div>
+            <div style="display: flex; flex-direction: column; margin-left: 0;">
+              <div style="margin-bottom: 30px;">
+                <div style="font-weight: bold; margin-bottom: 10px;">BIG DATA</div>
+                <div style="display: flex;">
+                  <div class="unit-box big-data-unit">UNITÉ 1</div>
+                  <div class="unit-box big-data-unit">UNITÉ 2</div>
+                </div>
+              </div>
+              <div>
+                <div style="font-weight: bold; margin-bottom: 10px;">CYBERSÉCURITÉ</div>
+                <div style="display: flex;">
+                  <div class="unit-box cyber-unit">UNITÉ 1</div>
+                  <div class="unit-box cyber-unit">UNITÉ 2</div>
+                </div>
               </div>
             </div>
           </div>
@@ -496,9 +478,11 @@
       transition: 'slide',
       width: "100%",
       height: "100%",
-      margin: 0.1,
+      margin: 0.05,
       minScale: 0.5,
-      maxScale: 1.5
+      maxScale: 1.5,
+      slideNumber: false,
+      overview: true
     });
   </script>
 </body>
