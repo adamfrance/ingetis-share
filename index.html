@@ -210,38 +210,49 @@
           </li>
         </ul>
         
-        <!-- Diagramme harmonisé aux couleurs -->
-        <div class="diagram-container" style="text-align: center; margin-top: 30px;">
-          <svg width="600" height="200" viewBox="0 0 600 200" style="max-width: 100%; height: auto;">
-            <!-- Tronc commun -->
-            <rect x="30" y="80" width="120" height="60" rx="5" fill="#1a1f4b"/>
-            <text x="90" y="105" text-anchor="middle" fill="white" font-size="14" font-weight="bold">TRONC COMMUN</text>
-            <text x="90" y="125" text-anchor="middle" fill="white" font-size="14" font-weight="bold">(1 UNITÉ)</text>
-            
-            <!-- Ligne de connexion -->
-            <line x1="150" y1="110" x2="210" y2="110" stroke="#333" stroke-width="2"/>
-            
-            <!-- Ligne verticale -->
-            <line x1="210" y1="60" x2="210" y2="160" stroke="#333" stroke-width="2"/>
-            
-            <!-- Lignes horizontales -->
-            <line x1="210" y1="60" x2="270" y2="60" stroke="#333" stroke-width="2"/>
-            <line x1="210" y1="160" x2="270" y2="160" stroke="#333" stroke-width="2"/>
-            
+        <!-- Diagramme harmonisé aux couleurs - Version agrandie -->
+        <div style="display: flex; justify-content: center; align-items: center; margin-top: 40px; gap: 30px;">
+          <!-- Tronc commun -->
+          <div style="background-color: #1a1f4b; color: white; padding: 30px; border-radius: 15px; text-align: center; min-width: 200px;">
+            <h4 style="color: white; margin: 0 0 10px 0; font-size: 1.3em;">TRONC COMMUN</h4>
+            <p style="margin: 0; font-size: 1.1em; font-weight: bold;">(1 UNITÉ)</p>
+          </div>
+          
+          <!-- Flèche -->
+          <div style="font-size: 2em; color: #1a1f4b;">→</div>
+          
+          <!-- Container des spécialisations -->
+          <div style="display: flex; flex-direction: column; gap: 20px;">
             <!-- Big Data -->
-            <text x="300" y="35" text-anchor="left" fill="#1a1f4b" font-size="16" font-weight="bold">BIG DATA</text>
-            <rect x="270" y="40" width="80" height="40" rx="5" fill="#d72c87"/>
-            <text x="310" y="65" text-anchor="middle" fill="white" font-size="14" font-weight="bold">UNITÉ 1</text>
-            <rect x="360" y="40" width="80" height="40" rx="5" fill="#d72c87"/>
-            <text x="400" y="65" text-anchor="middle" fill="white" font-size="14" font-weight="bold">UNITÉ 2</text>
+            <div style="display: flex; align-items: center; gap: 15px;">
+              <div style="background-color: #d72c87; color: white; padding: 20px; border-radius: 10px; text-align: center; min-width: 100px;">
+                <h5 style="color: white; margin: 0; font-size: 1em;">BIG DATA</h5>
+              </div>
+              <div style="display: flex; gap: 10px;">
+                <div style="background-color: #d72c87; color: white; padding: 15px 25px; border-radius: 8px; text-align: center;">
+                  <strong>UNITÉ 1</strong>
+                </div>
+                <div style="background-color: #d72c87; color: white; padding: 15px 25px; border-radius: 8px; text-align: center;">
+                  <strong>UNITÉ 2</strong>
+                </div>
+              </div>
+            </div>
             
             <!-- Cybersécurité -->
-            <text x="300" y="135" text-anchor="left" fill="#1a1f4b" font-size="16" font-weight="bold">CYBERSÉCURITÉ</text>
-            <rect x="270" y="140" width="80" height="40" rx="5" fill="#d72c87"/>
-            <text x="310" y="165" text-anchor="middle" fill="white" font-size="14" font-weight="bold">UNITÉ 1</text>
-            <rect x="360" y="140" width="80" height="40" rx="5" fill="#d72c87"/>
-            <text x="400" y="165" text-anchor="middle" fill="white" font-size="14" font-weight="bold">UNITÉ 2</text>
-          </svg>
+            <div style="display: flex; align-items: center; gap: 15px;">
+              <div style="background-color: #d72c87; color: white; padding: 20px; border-radius: 10px; text-align: center; min-width: 100px;">
+                <h5 style="color: white; margin: 0; font-size: 1em;">CYBERSÉCURITÉ</h5>
+              </div>
+              <div style="display: flex; gap: 10px;">
+                <div style="background-color: #d72c87; color: white; padding: 15px 25px; border-radius: 8px; text-align: center;">
+                  <strong>UNITÉ 1</strong>
+                </div>
+                <div style="background-color: #d72c87; color: white; padding: 15px 25px; border-radius: 8px; text-align: center;">
+                  <strong>UNITÉ 2</strong>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
